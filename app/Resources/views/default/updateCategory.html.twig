@@ -1,0 +1,19 @@
+<html>
+<head>
+
+</head>
+
+<body>
+<form method="post">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name">
+    <label for="article">Categories</label>
+    <select id="article" name="article">
+        {% for article in articles %}
+            <option value="{{ article.id }}">{{ article.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Envoyer!</button>
+</form>
+</body>
+</html>
